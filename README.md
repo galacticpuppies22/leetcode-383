@@ -21,11 +21,13 @@ git push -u origin main
 git stash
 git rebase -i <root_commit>
 git checkout stash@{0} -- CMakeLists.txt
-git checkout stash@{0} -- build-and-run.sh
-git add CMakeLists.txt build-and-run.sh
+git checkout stash@{0} -- build-and-run.sh #and whatever other files you want here
+git add CMakeLists.txt build-and-run.sh #and whatever other files you want here
 git commit --amend
 git rebase --continue
 git stash apply #the rest of the changes in source
 git add src/ incl/
 git commit --amend
 ```
+
+Is this good to do? No clue, but it works for now
